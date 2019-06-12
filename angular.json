@@ -11,7 +11,7 @@
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
-        } // ลอง
+        } // ลองอีก
       },
       "architect": {
         "build": {
