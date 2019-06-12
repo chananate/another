@@ -11,7 +11,7 @@
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
-        } //อีกรอบจริง
+        } //เอื้อง
       },
       "architect": {
         "build": {
