@@ -1,7 +1,11 @@
-<h1>
-  ค้นหาบัญชีของคุณ
-</h1>
-<br>
 <form clrForm>
-    <input clrInput placeholder="My input" name="input" [(ngModel)]="input" />
+    <h1>
+        ค้นหาบัญชีของคุณ
+      </h1>
+      <clr-input-container>
+          <label>กรอก username ของคุณ</label>
+          <br><input clrInput type="text" [(ngModel)]="midleName" name="midleName" required/>
+          <clr-control-error>กรุณากรอก username เพื่อค้นหา</clr-control-error>
+      </clr-input-container>
+      <br><button class="btn btn-success">ยืนยัน</button>
   </form>

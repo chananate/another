@@ -1,0 +1,21 @@
+<div style="text-align: center">
+<h1>
+    เปลี่ยนรหัสผ่านใหม่
+</h1>
+<form>
+    <clr-input-container>
+        <label>รหัสผ่านใหม่</label>
+        <br><input clrInput type="password" [(ngModel)]="midleName" name="midleName" required/>
+        <clr-control-error>กรุณากรอกรหัสผ่าน</clr-control-error>
+    </clr-input-container>
+    <clr-input-container>
+        <label>ยืนยันรหัสผ่านใหม่</label>
+        <br><input clrInput type="password" [(ngModel)]="midleName" name="midleName" required/>
+        <clr-control-error>กรุณากรอกรหัสผ่านใหม่อีกครั้ง</clr-control-error>
+    </clr-input-container>
+    </form>
+    <br>
+    <a href="../login/login.php">
+    <button type="submit" class="btn btn-success">ยืนยัน</button>
+    </a>
+  </div>
