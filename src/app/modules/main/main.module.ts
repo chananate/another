@@ -1,3 +1,5 @@
+import { ChangePwdComponent } from './../change/change-pwd/change-pwd.component';
+import { ChangeRoutingModule } from './../change/change-routing.module';
 import { InputOtpPageComponent } from './../forgot/input-otp-page/input-otp-page.component';
 import { SentOtpPageComponent } from './../forgot/sent-otp-page/sent-otp-page.component';
 import { FoundUserPageComponent } from './../forgot/found-user-page/found-user-page.component';
@@ -28,7 +30,7 @@ import { HelperModule } from 'src/app/pipes/helpers.module';
     UserComponent, PreferenceComponent,
     RegisterPageComponent, SigninPageComponent,
     FoundUserPageComponent,SentOtpPageComponent,
-    InputOtpPageComponent
+    InputOtpPageComponent, ChangePwdComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +40,8 @@ import { HelperModule } from 'src/app/pipes/helpers.module';
     MainRoutingModule,
     RegisterRoutingModule,
     SigninRoutingModule,
-    ForgotRoutingModule
+    ForgotRoutingModule,
+    ChangeRoutingModule
   ]
 })
 export class MainModule { }

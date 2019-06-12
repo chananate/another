@@ -1,3 +1,4 @@
+import { ChangePwdComponent } from './../change/change-pwd/change-pwd.component';
 import { InputOtpPageComponent } from './../forgot/input-otp-page/input-otp-page.component';
 import { SentOtpPageComponent } from './../forgot/sent-otp-page/sent-otp-page.component';
 import { FoundUserPageComponent } from './../forgot/found-user-page/found-user-page.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
       { path: 'found-user', component: FoundUserPageComponent },
       { path: 'sent-otp', component: SentOtpPageComponent },
       { path: 'input-otp', component: InputOtpPageComponent },
+      { path: 'change-pwd', component: ChangePwdComponent },
       { path: 'preference', component: PreferenceComponent },
       { path: 'about', component: AboutComponent },
       { path: '**', component: PageNotFoundComponent },
