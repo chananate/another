@@ -1,3 +1,5 @@
+import { FoundUserPageComponent } from './../forgot/found-user-page/found-user-page.component';
+import { ForgotRoutingModule } from './../forgot/forgot-routing.module';
 import { SigninRoutingModule } from './../signin/signin-routing.module';
 import { SigninPageComponent } from './../signin/signin-page/signin-page.component';
 import { RegisterRoutingModule } from './../register/register-routing.module';
@@ -16,12 +18,14 @@ import { UserComponent } from './user/user.component';
 import { PreferenceComponent } from './preference/preference.component';
 import { HelperModule } from 'src/app/pipes/helpers.module';
 
+
 @NgModule({
   declarations: [
     MainPageComponent, PageNotFoundComponent,
     AboutComponent, LayoutComponent,
     UserComponent, PreferenceComponent,
-    RegisterPageComponent, SigninPageComponent
+    RegisterPageComponent, SigninPageComponent,
+    FoundUserPageComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +34,8 @@ import { HelperModule } from 'src/app/pipes/helpers.module';
     HelperModule,
     MainRoutingModule,
     RegisterRoutingModule,
-    SigninRoutingModule
+    SigninRoutingModule,
+    ForgotRoutingModule
   ]
 })
 export class MainModule { }
