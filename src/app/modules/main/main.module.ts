@@ -8,6 +8,10 @@ import { SigninRoutingModule } from './../signin/signin-routing.module';
 import { SigninPageComponent } from './../signin/signin-page/signin-page.component';
 import { RegisterRoutingModule } from './../register/register-routing.module';
 import { RegisterPageComponent } from './../register/register-page/register-page.component';
+import { RegisterUserPageComponent } from './../register/registeruser-page/registeruser-page.component';
+import { RegisterUserNextPageComponent } from './../register/registeruser-page/registeruser-next-page/registeruser-next-page.component';
+import { RegisterEmployeePageComponent } from './../register/registeremployee-page/registeremployee-page.component';
+import { RegisterEmployeeNextPageComponent } from './../register/registeremployee-page/registeremployee-next-page/registeremployee-next-page.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -30,7 +34,9 @@ import { HelperModule } from 'src/app/pipes/helpers.module';
     UserComponent, PreferenceComponent,
     RegisterPageComponent, SigninPageComponent,
     FoundUserPageComponent,SentOtpPageComponent,
-    InputOtpPageComponent, ChangePwdComponent
+    InputOtpPageComponent, ChangePwdComponent,
+    RegisterUserPageComponent , RegisterUserNextPageComponent,
+    RegisterEmployeePageComponent , RegisterEmployeeNextPageComponent
   ],
   imports: [
     CommonModule,

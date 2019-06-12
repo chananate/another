@@ -15,7 +15,10 @@ import { AboutComponent } from './about/about.component';
 import { LayoutComponent } from './layout/layout.component';
 import { UserComponent } from './user/user.component';
 import { PreferenceComponent } from './preference/preference.component';
-
+import {RegisterUserPageComponent}  from './../register/registeruser-page/registeruser-page.component';
+import {RegisterUserNextPageComponent}  from './../register/registeruser-page/registeruser-next-page/registeruser-next-page.component';
+import {RegisterEmployeePageComponent}  from './../register/registeremployee-page/registeremployee-page.component';
+import {RegisterEmployeeNextPageComponent}  from './../register/registeremployee-page/registeremployee-next-page/registeremployee-next-page.component';
 
 const routes: Routes = [
   {
@@ -27,6 +30,10 @@ const routes: Routes = [
       { path: 'main', component: MainPageComponent },
       { path: 'user', component: UserComponent },
       { path: 'register', component: RegisterPageComponent },
+      { path: 'register-user', component: RegisterUserPageComponent },
+      { path: 'register-user-next', component: RegisterUserNextPageComponent },
+      { path: 'register-employee', component: RegisterEmployeePageComponent },
+      { path: 'register-employee-next', component: RegisterEmployeeNextPageComponent },
       { path: 'signin', component: SigninPageComponent },
       { path: 'found-user', component: FoundUserPageComponent },
       { path: 'sent-otp', component: SentOtpPageComponent },
