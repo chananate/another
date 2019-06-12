@@ -1,13 +1,20 @@
-<p>
-  signin-page works!
-</p>
-<form clrForm>
-  <clr-input-container>
-      <label>Field 1 label</label>
-      <input clrInput type="text" [(ngModel)]="model" name="example" />
-  </clr-input-container>
-  <clr-input-container>
-      <label>Field 2 label</label>
-      <input clrInput type="text" [(ngModel)]="model" name="example" />
-  </clr-input-container>
+
+<h1>เข้าสู่ระบบ</h1>
+<div style="margin-left:2%">
+<form class="clr-form clr-form-compact" >
+  <div class="clr-form-control">
+      <div class="clr-control-container">
+          <div class="clr-input-wrapper">
+            username <br> <input type="text" id="example" placeholder="ีusername" class="clr-input">
+            <br><br>
+            รหัสผ่าน <br> <input type="password" id="example" placeholder="รหัสผ่าน" class="clr-input">
+              <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+              <br><br><a href="#">สมัครสมาชิก</a>
+              <br><a href="#">ลืมรหัสผ่าน ?</a>
+              <br><button class="btn btn-success">เข้าสู่ระบบ</button>
+            </div>
+      </div>
+  </div>
 </form>
+</div>
+
