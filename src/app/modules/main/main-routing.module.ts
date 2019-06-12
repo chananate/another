@@ -1,3 +1,5 @@
+import { InputOtpPageComponent } from './../forgot/input-otp-page/input-otp-page.component';
+import { SentOtpPageComponent } from './../forgot/sent-otp-page/sent-otp-page.component';
 import { FoundUserPageComponent } from './../forgot/found-user-page/found-user-page.component';
 import { SigninPageComponent } from './../signin/signin-page/signin-page.component';
 import { RegisterPageComponent } from './../register/register-page/register-page.component';
@@ -26,6 +28,8 @@ const routes: Routes = [
       { path: 'register', component: RegisterPageComponent },
       { path: 'signin', component: SigninPageComponent },
       { path: 'found-user', component: FoundUserPageComponent },
+      { path: 'sent-otp', component: SentOtpPageComponent },
+      { path: 'input-otp', component: InputOtpPageComponent },
       { path: 'preference', component: PreferenceComponent },
       { path: 'about', component: AboutComponent },
       { path: '**', component: PageNotFoundComponent },

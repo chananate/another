@@ -1,3 +1,5 @@
+import { InputOtpPageComponent } from './../forgot/input-otp-page/input-otp-page.component';
+import { SentOtpPageComponent } from './../forgot/sent-otp-page/sent-otp-page.component';
 import { FoundUserPageComponent } from './../forgot/found-user-page/found-user-page.component';
 import { ForgotRoutingModule } from './../forgot/forgot-routing.module';
 import { SigninRoutingModule } from './../signin/signin-routing.module';
@@ -25,7 +27,8 @@ import { HelperModule } from 'src/app/pipes/helpers.module';
     AboutComponent, LayoutComponent,
     UserComponent, PreferenceComponent,
     RegisterPageComponent, SigninPageComponent,
-    FoundUserPageComponent
+    FoundUserPageComponent,SentOtpPageComponent,
+    InputOtpPageComponent
   ],
   imports: [
     CommonModule,
