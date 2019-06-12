@@ -1,3 +1,4 @@
+import { FoundUserPageComponent } from './../forgot/found-user-page/found-user-page.component';
 import { SigninPageComponent } from './../signin/signin-page/signin-page.component';
 import { RegisterPageComponent } from './../register/register-page/register-page.component';
 import { NgModule } from '@angular/core';
@@ -24,6 +25,7 @@ const routes: Routes = [
       { path: 'user', component: UserComponent },
       { path: 'register', component: RegisterPageComponent },
       { path: 'signin', component: SigninPageComponent },
+      { path: 'found-user', component: FoundUserPageComponent },
       { path: 'preference', component: PreferenceComponent },
       { path: 'about', component: AboutComponent },
       { path: '**', component: PageNotFoundComponent },
