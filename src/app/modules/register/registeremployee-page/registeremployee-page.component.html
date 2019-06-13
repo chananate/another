@@ -5,11 +5,11 @@
 <form clrForm (ngSubmit)="onSave()">
     <clr-input-container >
         <label>รหัสบัตรประชาชน</label>
-        <input clrInput type="text" [(ngModel)]="perId" name="perId" />
+        <input clrInput type="text" [(ngModel)]="employee_personalId" name="employee_personalId" />
     </clr-input-container>
     <clr-select-container>
         <label>หน่วยงาน</label>
-        <select clrSelect name="type" [(ngModel)]="type">
+        <select clrSelect name="employee_type" [(ngModel)]="employee_type">
             <option value="1">สำนักงานรัฐมนตรี กระทรวงสาธารณสุข</option>
             <option value="2">สำนักงานปลัดกระทรวงสาธารณสุข</option>
             <option value="3">กรมการแพทย์แผนไทยและการแพทย์ทางเลือก</option>
@@ -35,7 +35,7 @@
       </clr-select-container>
       <clr-select-container>
         <label>ตำแหน่ง</label>
-        <select clrSelect name="position" [(ngModel)]="position">
+        <select clrSelect name="employee_position" [(ngModel)]="employee_position">
             <option value="1">นักกายภาพบำบัด</option>
                 <option value="2">นักกิจกรรมบำบัด</option>
                 <option value="3">ทันตแพทย์</option>
@@ -169,27 +169,27 @@
       </clr-select-container>
     <clr-input-container>
         <label>คำนำหน้า</label>
-        <input clrInput type="text" [(ngModel)]="title" name="title" />
+        <input clrInput type="text" [(ngModel)]="employee_title" name="employee_title" />
     </clr-input-container>
     <clr-input-container>
         <label>ชื่อ</label>
-        <input clrInput type="text" [(ngModel)]="name" name="name" />
+        <input clrInput type="text" [(ngModel)]="employee_name" name="employee_name" />
     </clr-input-container>
     <clr-input-container>
         <label>สกุล</label>
-        <input clrInput type="text" [(ngModel)]="surname" name="surname" />
+        <input clrInput type="text" [(ngModel)]="employee_surname" name="employee_surname" />
     </clr-input-container>
     <clr-input-container>
         <label>วัน / เดือน / ปีเกิด</label>
-        <input clrInput type="date" [(ngModel)]="bdate" name="bdate" />
+        <input clrInput type="date" [(ngModel)]="employee_bd" name="employee_bd" />
     </clr-input-container>
     <clr-input-container>
-            <label>ที่อยู่</label>
-            <input clrInput type="text" [(ngModel)]="address" name="address" />
-        </clr-input-container>
+        <label>ที่อยู่</label>
+        <input clrInput type="text" [(ngModel)]="employee_address" name="employee_address" />
+    </clr-input-container>
     <clr-input-container>
         <label>ศาสนา</label>
-        <input clrInput type="text" [(ngModel)]="religion" name="religion" />
+        <input clrInput type="text" [(ngModel)]="employee_religion" name="employee_religion" />
     </clr-input-container>
     <br>
     <button type="submit" class="btn btn-primary" >Save</button>

@@ -12,15 +12,15 @@ export class RegisterEmployeePageComponent implements OnInit {
   empList: any[] = [];
   prefixList: any[];
   modalEdit = false;
-  perId :number;
-  type: string;
-  position:string;
-  title:string;
-  name:string;
-  surname:string;
-  bdate:Date;
-  address:string;
-  religion:string;
+  employee_personalId :number;
+  employee_type: string;
+  employee_position:string;
+  employee_title:string;
+  employee_name:string;
+  employee_surname:string;
+  employee_bd:Date;
+  employee_address:string;
+  employee_religion:string;
 
   constructor(private empService: EmployeeService,
     private alert: AlertService
@@ -41,9 +41,12 @@ export class RegisterEmployeePageComponent implements OnInit {
   async onSave() {
     let result: any;
 
-      result = await this.empService.insertEmp(this.perId,this.position,this.type,
-        this.title,this.name,this.surname,this.bdate,
-        this.address,this.religion);
+      result = await this.empService
+      .insertEmp(this.employee_personalId,this.employee_position,
+        this.employee_type,
+        this.employee_title,this.employee_name,this.employee_surname
+        ,this.employee_bd,
+        this.employee_address,this.employee_religion);
       console.log('insert ', result);
       await this.getEmp();
 

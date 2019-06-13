@@ -22,8 +22,13 @@ export class EmployeeService {
     .then(result => result)
     .catch(error=>error);
   }
-  insertEmp(perId,position,type,title,name,surname,bdate,address,religion){
-    return this.http.post("http://localhost:3000/emp-info/employee-insert",{perId,position,type,title,name,surname,bdate,address,religion})
+  insertEmp(employee_personalId,employee_position,employee_type
+    ,employee_title,employee_name,employee_surname
+    ,employee_bd,employee_address,employee_religion){
+    return this.http.post("http://localhost:3000/emp-info/employee-insert"
+    ,{employee_personalId,employee_position
+      ,employee_type,employee_title,employee_name,employee_surname
+      ,employee_bd,employee_address,employee_religion})
     .toPromise()
     .then(result => result)
     .catch(error=>error);
