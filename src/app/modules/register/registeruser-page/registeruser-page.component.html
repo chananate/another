@@ -1,33 +1,54 @@
-<h1>
+<div style="margin-left: 20% ;">
+<h1 style="margin-left: 20% ;">
     ลงทะเบียน-เจ้าหน้าที่
 </h1>
 <form clrForm>
     <clr-input-container>
         <label>รหัสบัตรประชาชน</label>
-        <input clrInput type="text" [(ngModel)]="perId" name="perId" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="perId" name="perId" />
     </clr-input-container>
     <clr-input-container>
         <label>คำนำหน้า</label>
-        <input clrInput type="text" [(ngModel)]="title" name="title" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="title" name="title" />
     </clr-input-container>
     <clr-input-container>
         <label>ชื่อ</label>
-        <input clrInput type="text" [(ngModel)]="name" name="name" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="name" name="name" />
     </clr-input-container>
     <clr-input-container>
         <label>สกุล</label>
-        <input clrInput type="text" [(ngModel)]="surname" name="surname" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="surname" name="surname" />
     </clr-input-container>
     <clr-input-container>
         <label>วัน / เดือน / ปีเกิด</label>
-        <input clrInput type="date" [(ngModel)]="bdate" name="bdate" />
+        <input clrInput style="width: 60%;" type="date" [(ngModel)]="bdate" name="bdate" />
     </clr-input-container>
     <clr-textarea-container>
         <label>ที่อยู่</label>
-        <textarea clrTextarea [(ngModel)]="address" name="address" required></textarea>
+        <textarea clrTextarea style="width: 60%;" [(ngModel)]="address" name="address" required></textarea>
     </clr-textarea-container>
     <clr-input-container>
         <label>ศาสนา</label>
-        <input clrInput type="text" [(ngModel)]="religion" name="religion" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="religion" name="religion" />
     </clr-input-container>
+    <br><hr>
+    <clr-input-container>
+        <label>username</label>
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="prefix" name="prefix" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>password</label>
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="name" name="name" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>confirm-password</label>
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="surname" name="surname" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>เบอร์โทรศัพท์</label>
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="surname" name="surname" />
+    </clr-input-container>
+    <div style="margin-left:20% ;">
+    <button type="submit" class="btn btn-primary" >Save</button>
+    </div>
 </form>
