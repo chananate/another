@@ -1,11 +1,12 @@
-<h1>
+<div style="margin-left: 20% ;">
+<h1 style="margin-left: 20% ;">
     ลงทะเบียน-เจ้าหน้าที่
 </h1>
  
 <form clrForm (ngSubmit)="onSave()">
-    <clr-input-container >
-        <label>รหัสบัตรประชาชน</label>
-        <input clrInput type="text" [(ngModel)]="employee_personalId" name="employee_personalId" />
+    <clr-input-container>
+            <label>รหัสบัตรประชาชน</label>
+            <input clrInput style="width: 60%;" type="text" [(ngModel)]="perId" name="perId" />
     </clr-input-container>
     <clr-select-container>
         <label>หน่วยงาน</label>
@@ -35,7 +36,7 @@
       </clr-select-container>
       <clr-select-container>
         <label>ตำแหน่ง</label>
-        <select clrSelect name="employee_position" [(ngModel)]="employee_position">
+        <select clrSelect style="width: 60%;" name="employee_position" [(ngModel)]="employee_position">
             <option value="1">นักกายภาพบำบัด</option>
                 <option value="2">นักกิจกรรมบำบัด</option>
                 <option value="3">ทันตแพทย์</option>
@@ -169,28 +170,46 @@
       </clr-select-container>
     <clr-input-container>
         <label>คำนำหน้า</label>
-        <input clrInput type="text" [(ngModel)]="employee_title" name="employee_title" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="employee_title" name="employee_title" />
     </clr-input-container>
     <clr-input-container>
         <label>ชื่อ</label>
-        <input clrInput type="text" [(ngModel)]="employee_name" name="employee_name" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="employee_name" name="employee_name" />
     </clr-input-container>
     <clr-input-container>
         <label>สกุล</label>
-        <input clrInput type="text" [(ngModel)]="employee_surname" name="employee_surname" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="employee_surname" name="employee_surname" />
     </clr-input-container>
     <clr-input-container>
         <label>วัน / เดือน / ปีเกิด</label>
-        <input clrInput type="date" [(ngModel)]="employee_bd" name="employee_bd" />
+        <input clrInput style="width: 60%;" type="date" [(ngModel)]="employee_bd" name="employee_bd" />
     </clr-input-container>
     <clr-input-container>
         <label>ที่อยู่</label>
-        <input clrInput type="text" [(ngModel)]="employee_address" name="employee_address" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="employee_address" name="employee_address" />
     </clr-input-container>
     <clr-input-container>
         <label>ศาสนา</label>
-        <input clrInput type="text" [(ngModel)]="employee_religion" name="employee_religion" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="employee_religion" name="employee_religion" />
     </clr-input-container>
-    <br>
+    <hr>
+    <clr-input-container>
+        <label>username</label>
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="prefix" name="prefix" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>password</label>
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="name" name="name" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>confirm-password</label>
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="surname" name="surname" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>เบอร์โทรศัพท์</label>
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="surname" name="surname" />
+    </clr-input-container>
+    <div style="margin-left: 30%;">
     <button type="submit" class="btn btn-primary" >Save</button>
+    </div>
 </form>
