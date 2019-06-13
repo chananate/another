@@ -5,6 +5,7 @@ import { FoundUserPageComponent } from './../forgot/found-user-page/found-user-p
 import { SigninPageComponent } from './../signin/signin-page/signin-page.component';
 import { RegisterPageComponent } from './../register/register-page/register-page.component';
 import { InformationPageComponent}  from './../information/information-page/information-page.component';
+import { EditinfoPageComponent}  from './../information/editinfo-page/editinfo-page.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -22,6 +23,7 @@ import { RegisterEmployeePageComponent}  from './../register/registeremployee-pa
 import { RegisterEmployeeNextPageComponent}  from './../register/registeremployee-page/registeremployee-next-page/registeremployee-next-page.component';
 
 
+
 const routes: Routes = [
   {
     path: 'main',
@@ -37,6 +39,7 @@ const routes: Routes = [
       { path: 'register-employee', component: RegisterEmployeePageComponent },
       { path: 'register-employee-next', component: RegisterEmployeeNextPageComponent },
       { path: 'information', component: InformationPageComponent },
+      { path: 'information-edit', component: EditinfoPageComponent },
       { path: 'signin', component: SigninPageComponent },
       { path: 'found-user', component: FoundUserPageComponent },
       { path: 'sent-otp', component: SentOtpPageComponent },
