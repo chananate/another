@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { AlertService } from 'src/app/services/alert.service';
 import { EmployeeService } from "./../../../services/employee.service";
 
 @Component({
@@ -8,8 +9,13 @@ import { EmployeeService } from "./../../../services/employee.service";
 })
 export class RegisterEmployeePageComponent implements OnInit {
   empList: any[] = [];
+  prefixList: any[];
+  modalEdit = false;
+  currentRow: any;
 
-  constructor(private empService: EmployeeService) {}
+  constructor(private empService: EmployeeService,
+    private alert: AlertService
+    ) {}
 
   ngOnInit() {
     this.getEmp();
@@ -22,4 +28,10 @@ export class RegisterEmployeePageComponent implements OnInit {
       console.log(this.empList);
     }
   }
+
+  async onAdd() {
+    this.currentRow = { prefix: "", dep: 0, mode: "add" };
+    this.modalEdit = true;
+  }
+
 }
