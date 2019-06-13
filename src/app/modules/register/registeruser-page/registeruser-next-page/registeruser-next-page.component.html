@@ -1,37 +1,41 @@
-<!-- Load the latest version -->
-<link rel="stylesheet" href="https://unpkg.com/@clr/ui/clr-ui.min.css" />
-<!-- Or load a specific version -->
-<link rel="stylesheet" href="https://unpkg.com/@clr/ui@0.12.5/clr-ui.min.css" />
- 
-
-<!-- <p class="text-center">ลงทะเบียนผู้มาใช้บริการ-ใส่username/password</p> -->
-<div style="position:relative; padding-top:2%; padding-left:15%;padding-right:15%; background-color:#D3D3D3;">
-    <div class="jumbotron">
-                <h2>ลงทะเบียน-เจ้าหน้าที่</h2><br>
-                <hr>
-        <form action="">
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1">username</label>
-                <input type="text" class="form-control" name="username" id="username" >
+<div style="margin-left: 20% ;">
+        <h1 style="margin-left: 25% ;">
+                ลงทะเบียน-ผู้ป่วย(ต่อ)
+            </h1>
+            <form clrForm >
+                <clr-input-container>
+                    <label>username</label>
+                    <input clrInput style="width: 60%;" type="text" [(ngModel)]="prefix" name="prefix" />
+                </clr-input-container>
+                <clr-input-container>
+                    <label>password</label>
+                    <input clrInput style="width: 60%;" type="text" [(ngModel)]="name" name="name" />
+                </clr-input-container>
+                <clr-input-container>
+                    <label>confirm-password</label>
+                    <input clrInput style="width: 60%;" type="text" [(ngModel)]="surname" name="surname" />
+                </clr-input-container>
+                <clr-textarea-container>
+                    <label>ที่อยู่</label>
+                    <textarea clrTextarea style="width: 60%;" [(ngModel)]="address" name="address"></textarea>
+                </clr-textarea-container>
+                <clr-input-container>
+                    <label>ศาสนา</label>
+                    <input clrInput type="text" style="width: 60%;" [(ngModel)]="religion" name="religion" />
+                </clr-input-container><br>
+                
+                <clr-input-container>
+                    <label>password(เดิม)</label>
+                    <input clrInput style="width: 60%;" type="text" [(ngModel)]="oldpassword" name="oldpassword" />
+                </clr-input-container>
+                <clr-input-container>
+                    <label>password(ใหม่)</label>
+                    <input clrInput style="width: 60%;" type="text" [(ngModel)]="password" name="password" />
+                </clr-input-container>
+                <clr-input-container>
+                    <label>password(ใหม่อีกครั้ง)</label>
+                    <input clrInput style="width: 60%;" type="text" [(ngModel)]="confirmpassword" name="confirmpassword" />
+                </clr-input-container>
+            </form>
             </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">password</label>
-                <input type="text" class="form-control" name="password" id="password" >
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">confirm-password</label>
-                <input type="text" class="form-control" name="conpassword" id="conpassword" >
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">เบอร์โทรศัพพท์</label>
-                <input type="text" class="form-control" name="tel" id="tel" >
-            </div>
-            <div style="text-align: center;">
-                <button type="submit" name="submit" class="btn btn-primary mb-2" style="background-color: #036000 ;">ยืนยัน</button>
-                <a href="registerUser.php"><button type="button" name="back" class="btn btn-primary mb-2" style="background-color: #036000 ;">ย้อนกลับ</button></a>
-            </div>
-</form>
-</div>
-</div>
-
+            
