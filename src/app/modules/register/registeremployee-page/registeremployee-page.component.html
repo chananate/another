@@ -1,10 +1,9 @@
 <h1>
     ลงทะเบียน-เจ้าหน้าที่
 </h1>
-<pre>{{myform.value | json}}</pre>
-<pre>{{myform.valid}}</pre>  
-<form (ngSubmit)="insertEmp()">
-    <clr-input-container>
+ 
+<form clrForm (ngSubmit)="onSave()">
+    <clr-input-container >
         <label>รหัสบัตรประชาชน</label>
         <input clrInput type="text" [(ngModel)]="perId" name="perId" />
     </clr-input-container>
@@ -184,14 +183,14 @@
         <label>วัน / เดือน / ปีเกิด</label>
         <input clrInput type="date" [(ngModel)]="bdate" name="bdate" />
     </clr-input-container>
-    <clr-textarea-container>
-        <label>ที่อยู่</label>
-        <textarea clrTextarea [(ngModel)]="address" name="address" required></textarea>
-    </clr-textarea-container>
+    <clr-input-container>
+            <label>ที่อยู่</label>
+            <input clrInput type="text" [(ngModel)]="address" name="address" />
+        </clr-input-container>
     <clr-input-container>
         <label>ศาสนา</label>
         <input clrInput type="text" [(ngModel)]="religion" name="religion" />
     </clr-input-container>
     <br>
-    <button type="button" class="btn btn-primary" (click)="onSave()" [disabled]="!perId || !type">Save</button>
+    <button type="submit" class="btn btn-primary" >Save</button>
 </form>

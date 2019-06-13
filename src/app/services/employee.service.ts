@@ -16,14 +16,14 @@ export class EmployeeService {
     .then(result => result)
     .catch(error=>error);
   }
-  getEmployeeInfo(){
-    return this.http.post("http://localhost:3000/emp-info/employee-info",{})
+  getEmployeeInfo(perId){
+    return this.http.post("http://localhost:3000/emp-info/employee-info",{perId})
     .toPromise()
     .then(result => result)
     .catch(error=>error);
   }
-  employeeInsert(){
-    return this.http.post("http://localhost:3000/emp-info/employee-insert",{})
+  insertEmp(perId,position,type,title,name,surname,bdate,address,religion){
+    return this.http.post("http://localhost:3000/emp-info/employee-insert",{perId,position,type,title,name,surname,bdate,address,religion})
     .toPromise()
     .then(result => result)
     .catch(error=>error);

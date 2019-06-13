@@ -1,3 +1,4 @@
+import { PatientService } from './../../../services/patient.service';
 import { Component, OnInit } from "@angular/core";
 import { AlertService } from 'src/app/services/alert.service';
 import { EmployeeService } from "./../../../services/employee.service";
@@ -11,14 +12,22 @@ export class RegisterEmployeePageComponent implements OnInit {
   empList: any[] = [];
   prefixList: any[];
   modalEdit = false;
-  currentRow: any;
+  perId :number;
+  type: string;
+  position:string;
+  title:string;
+  name:string;
+  surname:string;
+  bdate:Date;
+  address:string;
+  religion:string;
 
   constructor(private empService: EmployeeService,
     private alert: AlertService
     ) {}
 
-  ngOnInit() {
-    this.getEmp();
+  async ngOnInit() {
+    await this.getEmp();
   }
   
   async getEmp() {
@@ -29,9 +38,15 @@ export class RegisterEmployeePageComponent implements OnInit {
     }
   }
 
-  async onAdd() {
-    this.currentRow = { prefix: "", dep: 0, mode: "add" };
-    this.modalEdit = true;
+  async onSave() {
+    let result: any;
+
+      result = await this.empService.insertEmp(this.perId,this.position,this.type,
+        this.title,this.name,this.surname,this.bdate,
+        this.address,this.religion);
+      console.log('insert ', result);
+      await this.getEmp();
+
   }
 
 }
