@@ -20,7 +20,7 @@ import { RegisterUserPageComponent}  from './../register/registeruser-page/regis
 import { RegisterUserNextPageComponent}  from './../register/registeruser-page/registeruser-next-page/registeruser-next-page.component';
 import { RegisterEmployeePageComponent}  from './../register/registeremployee-page/registeremployee-page.component';
 import { RegisterEmployeeNextPageComponent}  from './../register/registeremployee-page/registeremployee-next-page/registeremployee-next-page.component';
-import { EditinfoPageComponent}  from './../information/editinfo-page/editinfo-page.component';
+
 
 const routes: Routes = [
   {
@@ -37,7 +37,6 @@ const routes: Routes = [
       { path: 'register-employee', component: RegisterEmployeePageComponent },
       { path: 'register-employee-next', component: RegisterEmployeeNextPageComponent },
       { path: 'information', component: InformationPageComponent },
-      { path: 'information-edit', component: EditinfoPageComponent },
       { path: 'signin', component: SigninPageComponent },
       { path: 'found-user', component: FoundUserPageComponent },
       { path: 'sent-otp', component: SentOtpPageComponent },

@@ -14,7 +14,6 @@ import { RegisterEmployeePageComponent } from './../register/registeremployee-pa
 import { RegisterEmployeeNextPageComponent } from './../register/registeremployee-page/registeremployee-next-page/registeremployee-next-page.component';
 import { InformationRoutingModule } from './../information/information-routing.module';
 import { InformationPageComponent } from './../information/information-page/information-page.component';
-import { EditinfoPageComponent } from './../information/editinfo-page/editinfo-page.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -40,7 +39,7 @@ import { HelperModule } from 'src/app/pipes/helpers.module';
     InputOtpPageComponent, ChangePwdComponent,
     RegisterUserPageComponent , RegisterUserNextPageComponent,
     RegisterEmployeePageComponent , RegisterEmployeeNextPageComponent,
-    InformationPageComponent,EditinfoPageComponent
+    InformationPageComponent
   ],
   imports: [
     CommonModule,
