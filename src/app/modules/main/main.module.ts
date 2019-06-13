@@ -12,6 +12,9 @@ import { RegisterUserPageComponent } from './../register/registeruser-page/regis
 import { RegisterUserNextPageComponent } from './../register/registeruser-page/registeruser-next-page/registeruser-next-page.component';
 import { RegisterEmployeePageComponent } from './../register/registeremployee-page/registeremployee-page.component';
 import { RegisterEmployeeNextPageComponent } from './../register/registeremployee-page/registeremployee-next-page/registeremployee-next-page.component';
+import { InformationRoutingModule } from './../information/information-routing.module';
+import { InformationPageComponent } from './../information/information-page/information-page.component';
+import { EditinfoPageComponent } from './../information/editinfo-page/editinfo-page.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -36,7 +39,8 @@ import { HelperModule } from 'src/app/pipes/helpers.module';
     FoundUserPageComponent,SentOtpPageComponent,
     InputOtpPageComponent, ChangePwdComponent,
     RegisterUserPageComponent , RegisterUserNextPageComponent,
-    RegisterEmployeePageComponent , RegisterEmployeeNextPageComponent
+    RegisterEmployeePageComponent , RegisterEmployeeNextPageComponent,
+    InformationPageComponent,EditinfoPageComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +51,8 @@ import { HelperModule } from 'src/app/pipes/helpers.module';
     RegisterRoutingModule,
     SigninRoutingModule,
     ForgotRoutingModule,
-    ChangeRoutingModule
+    ChangeRoutingModule,
+    InformationRoutingModule
   ]
 })
 export class MainModule { }
