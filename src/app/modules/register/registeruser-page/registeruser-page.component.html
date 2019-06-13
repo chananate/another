@@ -1,49 +1,33 @@
-<!-- Load the latest version -->
-<link rel="stylesheet" href="https://unpkg.com/@clr/ui/clr-ui.min.css" />
-<!-- Or load a specific version -->
-<link rel="stylesheet" href="https://unpkg.com/@clr/ui@0.12.5/clr-ui.min.css" />
- 
-
-<!-- <p class="text-center">ลงทะเบียนผู้มาใช้บริการ</p> -->
-<div style="position:relative; padding-top:2%; padding-left:15%;padding-right:15%; background-color:#D3D3D3; ">
-  <div class="jumbotron" >
-              <h2>ลงทะเบียน-ผู้ใช้บริการ</h2><br>
-              <hr>
-      <form action="registeruser-next-page/registeruser-next-page.component.html" clrform>
-          <div class="form-group">
-              <label for="exampleFormControlInput1">รหัสบัตรประชาชน</label>
-              <input type="text" class="form-control" name="id" id="id">
-          </div>
-          <div class="form-group">
-              <label for="exampleFormControlInput1">คำนำหน้า</label>
-              <input type="text" class="form-control" name="prefix" id="prefix" >
-          </div>
-          <div class="form-group">
-              <label for="exampleFormControlInput1">ชื่อ</label>
-
-              <input type="text" class="form-control" name="Name" id="Name" >
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">นามสกุล</label>
-            <input type="text" class="form-control" name="Name" id="Name" >
-        </div>
-          <div class="form-group">
-              <label for="exampleFormControlInput1">วัน/เดือน/ปีเกิด</label>
-              <input type="text" class="form-control" name="birthday" id="birthday" >
-          </div>
-          <div class="form-group">
-              <label for="exampleFormControlTextarea1">ที่อยู่</label>
-              <textarea class="form-control" name="address" id="address" rows="3" ></textarea>
-          </div>
-          <div class="form-group">
-              <label for="exampleFormControlInput1">ศาสนา</label>
-              <input type="text" class="form-control" name="Religion" id="Religion" >
-          </div>
-          <div style="text-align: center;">
-              <button type="submit" name="submit" class="btn btn-primary mb-2" style="background-color: #036000 ;">ถัดไป</button>
-              <button type="button" name="back" class="btn btn-primary mb-2" style="background-color: #036000 ;">ย้อนกลับ</button>
-          </div>
-  </form>
-</div>
-</div>
-
+<h1>
+    ลงทะเบียน-เจ้าหน้าที่
+</h1>
+<form clrForm>
+    <clr-input-container>
+        <label>รหัสบัตรประชาชน</label>
+        <input clrInput type="text" [(ngModel)]="perId" name="perId" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>คำนำหน้า</label>
+        <input clrInput type="text" [(ngModel)]="title" name="title" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>ชื่อ</label>
+        <input clrInput type="text" [(ngModel)]="name" name="name" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>สกุล</label>
+        <input clrInput type="text" [(ngModel)]="surname" name="surname" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>วัน / เดือน / ปีเกิด</label>
+        <input clrInput type="date" [(ngModel)]="bdate" name="bdate" />
+    </clr-input-container>
+    <clr-textarea-container>
+        <label>ที่อยู่</label>
+        <textarea clrTextarea [(ngModel)]="address" name="address" required></textarea>
+    </clr-textarea-container>
+    <clr-input-container>
+        <label>ศาสนา</label>
+        <input clrInput type="text" [(ngModel)]="religion" name="religion" />
+    </clr-input-container>
+</form>
