@@ -36,7 +36,7 @@
       </clr-select-container>
       <clr-select-container>
         <label>ตำแหน่ง</label>
-        <select clrSelect style="width: 60%;" name="employee_position" [(ngModel)]="employee_position">
+        <select clrSelect style="width: 100%;" name="employee_position" [(ngModel)]="employee_position">
             <option value="1">นักกายภาพบำบัด</option>
                 <option value="2">นักกิจกรรมบำบัด</option>
                 <option value="3">ทันตแพทย์</option>
@@ -192,7 +192,9 @@
         <label>ศาสนา</label>
         <input clrInput style="width: 60%;" type="text" [(ngModel)]="employee_religion" name="employee_religion" />
     </clr-input-container>
+    <br>
     <hr>
+    <br>
     <clr-input-container>
         <label>username</label>
         <input clrInput style="width: 60%;" type="text" [(ngModel)]="prefix" name="prefix" />
@@ -208,7 +210,7 @@
     <clr-input-container>
         <label>เบอร์โทรศัพท์</label>
         <input clrInput style="width: 60%;" type="text" [(ngModel)]="surname" name="surname" />
-    </clr-input-container>
+    </clr-input-container><br>
     <div style="margin-left: 30%;">
     <button type="submit" class="btn btn-primary" >Save</button>
     </div>
