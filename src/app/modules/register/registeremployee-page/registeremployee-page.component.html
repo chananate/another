@@ -1,14 +1,16 @@
 <h1>
     ลงทะเบียน-เจ้าหน้าที่
 </h1>
-<form clrForm>
+<pre>{{myform.value | json}}</pre>
+<pre>{{myform.valid}}</pre>  
+<form (ngSubmit)="insertEmp()">
     <clr-input-container>
         <label>รหัสบัตรประชาชน</label>
         <input clrInput type="text" [(ngModel)]="perId" name="perId" />
     </clr-input-container>
     <clr-select-container>
         <label>หน่วยงาน</label>
-        <select clrSelect name="options" [(ngModel)]="options">
+        <select clrSelect name="type" [(ngModel)]="type">
             <option value="1">สำนักงานรัฐมนตรี กระทรวงสาธารณสุข</option>
             <option value="2">สำนักงานปลัดกระทรวงสาธารณสุข</option>
             <option value="3">กรมการแพทย์แผนไทยและการแพทย์ทางเลือก</option>
@@ -34,7 +36,7 @@
       </clr-select-container>
       <clr-select-container>
         <label>ตำแหน่ง</label>
-        <select clrSelect name="options" [(ngModel)]="options">
+        <select clrSelect name="position" [(ngModel)]="position">
             <option value="1">นักกายภาพบำบัด</option>
                 <option value="2">นักกิจกรรมบำบัด</option>
                 <option value="3">ทันตแพทย์</option>
@@ -190,4 +192,6 @@
         <label>ศาสนา</label>
         <input clrInput type="text" [(ngModel)]="religion" name="religion" />
     </clr-input-container>
+    <br>
+    <button type="button" class="btn btn-primary" (click)="onSave()" [disabled]="!perId || !type">Save</button>
 </form>
