@@ -1,36 +1,76 @@
 
 <h1 style="text-align:center;">
-    ประวัติ
+    ประวัติ 
+    <!-- <label>{{type}}</label> -->
 </h1><br>
+
+<!-- <div *ngIf="userList.length > 0">test</div> -->
+
 <div style="margin-left: 20% ;">
-<form clrForm>
+    <div *ngIf="type=='e'">
+    <form clrForm *ngFor="let user of userList" >
     <clr-input-container>
         <label>รหัสบัตรประชาชน</label>
-        
+        <label>{{user.employee_personalId}}</label>
     </clr-input-container>
     <clr-input-container>
         <label>คำนำหน้า</label>
-        
+        <label>{{user.employee_title}}</label>        
     </clr-input-container>
     <clr-input-container>
         <label>ชื่อ</label>
-        
+        <label>{{user.employee_name}}</label>        
     </clr-input-container>
     <clr-input-container>
         <label>สกุล</label>
-        
+        <label>{{user.employee_surname}}</label>        
     </clr-input-container>
     <clr-input-container>
         <label>วัน / เดือน / ปีเกิด</label>
-        
+        <label>{{user.employee_bd}}</label>        
     </clr-input-container>
     <clr-textarea-container>
         <label>ที่อยู่</label>
-        
+        <label>{{user.employee_address}}</label>        
     </clr-textarea-container>
     <clr-input-container>
         <label>ศาสนา</label>
-        
+        <label>{{user.employee_religion}}</label>        
     </clr-input-container>
 </form>
+</div>
+
+<div *ngIf="type=='p'">
+    <form clrForm *ngFor="let user of userList" >
+    <clr-input-container>
+        <label>รหัสบัตรประชาชน</label>
+        <label>{{user.patient_personalId}}</label>
+    </clr-input-container>
+    <clr-input-container>
+        <label>คำนำหน้า</label>
+        <label>{{user.patient_title}}</label>        
+    </clr-input-container>
+    <clr-input-container>
+        <label>ชื่อ</label>
+        <label>{{user.patient_name}}</label>        
+    </clr-input-container>
+    <clr-input-container>
+        <label>สกุล</label>
+        <label>{{user.patient_surname}}</label>        
+    </clr-input-container>
+    <clr-input-container>
+        <label>วัน / เดือน / ปีเกิด</label>
+        <label>{{user.patient_bd}}</label>        
+    </clr-input-container>
+    <clr-textarea-container>
+        <label>ที่อยู่</label>
+        <label>{{user.patient_address}}</label>        
+    </clr-textarea-container>
+    <clr-input-container>
+        <label>ศาสนา</label>
+        <label>{{user.patient_religion}}</label>        
+    </clr-input-container>
+</form>
+</div>
+
 </div>

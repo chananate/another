@@ -2,10 +2,10 @@
 <h1>
     ลงทะเบียน-ผู้ใช้งานทั่วไป  
 </h1>
-<form clrForm>
+<form clrForm (ngSubmit)="onSave()">
     <clr-input-container>
         <label>รหัสบัตรประชาชน</label>
-        <input clrInput style="width: 60%;" type="text" [(ngModel)]="patient_infoId" name="patient_infoId" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="patient_personalId" name="patient_personalId" />
     </clr-input-container>
     <clr-input-container>
         <label>คำนำหน้า</label>

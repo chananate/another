@@ -61,5 +61,11 @@ export class UserService {
     .catch(error=>error);
   }
 
+  checkType(tel){
+    return this.http.post("http://localhost:3000/user-info/check-type",{tel})
+    .toPromise()
+    .then(result => result)
+    .catch(error=>error);
+  }
 
 }

@@ -51,7 +51,7 @@ export class RegisterEmployeePageComponent implements OnInit {
   async onSave() {
     let result1: any;
     let result2: any;
-    
+
       result1 = await this.empService
       .insertEmp(this.employee_personalId,this.employee_position,
         this.employee_type,

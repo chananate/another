@@ -10,7 +10,6 @@ import { AlertService } from 'src/app/services/alert.service';
 })
 export class RegisterUserPageComponent implements OnInit {
   patientList: any[] = [];
-  prefixList: any[];
   modalEdit = false;
   patient_personalId :number;
   patient_title:string;
@@ -60,7 +59,7 @@ export class RegisterUserPageComponent implements OnInit {
       .insertUser(this.username,this.password,this.patient_tel,this.type);
       console.log('insert', result);
       await this.getPatient();
-
+      document.location.href="#/main/main";
   }
 }
 
