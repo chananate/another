@@ -27,13 +27,14 @@ export class PatientService {
     .catch(error=>error);
   }
 
-  insertPatient(Patient_personalId
-    ,Patient_title,Patient_name,Patient_surname
-    ,Patient_bd,Patient_address,Patient_religion){
+  insertPatient(patient_personalId
+    ,patient_title,patient_name,patient_surname
+    ,patient_bd,patient_address,patient_religion
+    ,patient_tel){
     return this.http.post("http://localhost:3000/pat-info/patient-insert"
-    ,{Patient_personalId
-      ,Patient_title,Patient_name,Patient_surname
-      ,Patient_bd,Patient_address,Patient_religion})
+    ,{patient_personalId
+      ,patient_title,patient_name,patient_surname
+      ,patient_bd,patient_address,patient_religion,patient_tel})
     .toPromise()
     .then(result => result)
     .catch(error=>error);

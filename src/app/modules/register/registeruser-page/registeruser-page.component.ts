@@ -19,9 +19,15 @@ export class RegisterUserPageComponent implements OnInit {
   patient_bd:Date;
   patient_address:string;
   patient_religion:string;
+  username:string;
+  password:string;
+  patient_tel:string;
+  type="p";
 
-  constructor(private patientService: PatientService,
-    private alert: AlertService
+  constructor(
+    private patientService: PatientService,
+    private alert: AlertService,
+    private userService: UserService
     ) {}
 
   async ngOnInit() {
@@ -36,16 +42,22 @@ export class RegisterUserPageComponent implements OnInit {
     }
   }
 
-  async onSave() {
+  async onSave() { //เวลา submit 
     let result: any;
 
       result = await this.patientService
-      .insertPatient(this.patient_personalId,this.patient_title,
+      .insertPatient(
+        this.patient_personalId,
+        this.patient_title,
         this.patient_name,
         this.patient_surname,
         this.patient_bd,
         this.patient_address,
-        this.patient_religion);
+        this.patient_religion,
+        this.patient_tel);
+    let result2:any;    
+      result2 = await this.userService
+      .insertUser(this.username,this.password,this.patient_tel,this.type);
       console.log('insert', result);
       await this.getPatient();
 
