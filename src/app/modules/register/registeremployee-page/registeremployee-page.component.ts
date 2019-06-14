@@ -1,4 +1,4 @@
-import { PatientService } from './../../../services/patient.service';
+import { UserService } from './../../../services/user.service';
 import { Component, OnInit } from "@angular/core";
 import { AlertService } from 'src/app/services/alert.service';
 import { EmployeeService } from "./../../../services/employee.service";
@@ -22,9 +22,14 @@ export class RegisterEmployeePageComponent implements OnInit {
   employee_address:string;
   employee_religion:string;
   employee_tel:string;
+  username:string;
+  password:string;
+  type="e";
 
-  constructor(private empService: EmployeeService,
-    private alert: AlertService
+  constructor(
+    private empService: EmployeeService,
+    private alert: AlertService,
+    private userService : UserService
     ) {}
 
   async ngOnInit() {
@@ -44,14 +49,19 @@ export class RegisterEmployeePageComponent implements OnInit {
   }
 
   async onSave() {
-    let result: any;
-      result = await this.empService
+    let result1: any;
+    let result2: any;
+    
+      result1 = await this.empService
       .insertEmp(this.employee_personalId,this.employee_position,
         this.employee_type,
         this.employee_title,this.employee_name,this.employee_surname
         ,this.employee_bd,
         this.employee_address,this.employee_religion,this.employee_tel);
-      console.log('insert ', result);
+
+        result2 = await this.userService
+      .insertUser(this.username,this.password,this.employee_tel,this.type);
+      console.log('insert ', result2);
       await this.getEmp();
       document.location.href="#/main/main";
   }
