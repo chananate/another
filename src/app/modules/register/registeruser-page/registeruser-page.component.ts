@@ -1,3 +1,4 @@
+import { UserService } from './../../../services/user.service';
 import { PatientService } from './../../../services/patient.service';
 import { Component, OnInit } from "@angular/core";
 import { AlertService } from 'src/app/services/alert.service';
