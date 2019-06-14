@@ -16,21 +16,38 @@ export class EmployeeService {
     .then(result => result)
     .catch(error=>error);
   }
-  getEmployeeInfo(perId){
-    return this.http.post("http://localhost:3000/emp-info/employee-info",{perId})
+
+  getEmployeeInfo(employee_personalId){
+    return this.http.post("http://localhost:3000/emp-info/employee-info",{employee_personalId})
     .toPromise()
     .then(result => result)
     .catch(error=>error);
   }
+
   insertEmp(employee_personalId,employee_position,employee_type
     ,employee_title,employee_name,employee_surname
-    ,employee_bd,employee_address,employee_religion){
+    ,employee_bd,employee_address,employee_religion,employee_tel){
     return this.http.post("http://localhost:3000/emp-info/employee-insert"
     ,{employee_personalId,employee_position
       ,employee_type,employee_title,employee_name,employee_surname
-      ,employee_bd,employee_address,employee_religion})
+      ,employee_bd,employee_address,employee_religion,employee_tel})
     .toPromise()
     .then(result => result)
     .catch(error=>error);
   }
+
+  updateEmployee(employee_personalId){
+    return this.http.post("http://localhost:3000/emp-info/employee-update",{employee_personalId})
+    .toPromise()
+    .then(result => result)
+    .catch(error=>error);
+  }
+  
+  delEmployee(employee_personalId){
+    return this.http.post("http://localhost:3000/emp-info/employee-del",{employee_personalId})
+    .toPromise()
+    .then(result => result)
+    .catch(error=>error);
+  }
+
 }

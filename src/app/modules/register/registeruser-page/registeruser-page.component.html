@@ -1,33 +1,56 @@
+
 <h1>
     ลงทะเบียน-ผู้ใช้งานทั่วไป  
 </h1>
 <form clrForm>
     <clr-input-container>
         <label>รหัสบัตรประชาชน</label>
-        <input clrInput type="text" [(ngModel)]="perId" name="perId" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="patient_infoId" name="patient_infoId" />
     </clr-input-container>
     <clr-input-container>
         <label>คำนำหน้า</label>
-        <input clrInput type="text" [(ngModel)]="title" name="title" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="patient_title" name="patient_title" />
     </clr-input-container>
     <clr-input-container>
         <label>ชื่อ</label>
-        <input clrInput type="text" [(ngModel)]="name" name="name" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="patient_name" name="patient_name" />
     </clr-input-container>
     <clr-input-container>
         <label>สกุล</label>
-        <input clrInput type="text" [(ngModel)]="surname" name="surname" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="patient_surname" name="patient_surname" />
     </clr-input-container>
     <clr-input-container>
         <label>วัน / เดือน / ปีเกิด</label>
-        <input clrInput type="date" [(ngModel)]="bdate" name="bdate" />
+        <input clrInput style="width: 60%;" type="date" [(ngModel)]="patient_bd" name="patient_bd" />
     </clr-input-container>
     <clr-textarea-container>
         <label>ที่อยู่</label>
-        <textarea clrTextarea [(ngModel)]="address" name="address" required></textarea>
+        <textarea clrTextarea style="width: 60%;" [(ngModel)]="patient_address" name="patient_address" required></textarea>
     </clr-textarea-container>
     <clr-input-container>
         <label>ศาสนา</label>
-        <input clrInput type="text" [(ngModel)]="religion" name="religion" />
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="patient_religion" name="patient_religion" />
     </clr-input-container>
+    <br>
+    <hr>
+    <br>
+    <clr-input-container>
+        <label>username</label>
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="username" name="username" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>password</label>
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="password" name="password" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>confirm-password</label>
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="confirm-password" name="confirm-password" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>เบอร์โทรศัพท์</label>
+        <input clrInput style="width: 60%;" type="text" [(ngModel)]="patient_tel" name="patient_tel" />
+    </clr-input-container><br>
+    <div style="margin-left: 30%;">
+        <button type="submit" class="btn btn-primary" >Save</button>
+    </div>
 </form>

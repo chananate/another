@@ -21,6 +21,7 @@ export class RegisterEmployeePageComponent implements OnInit {
   employee_bd:Date;
   employee_address:string;
   employee_religion:string;
+  employee_tel:string;
 
   constructor(private empService: EmployeeService,
     private alert: AlertService
@@ -37,19 +38,22 @@ export class RegisterEmployeePageComponent implements OnInit {
       console.log(this.empList);
     }
   }
+  async getEmpInfo(){
+    const result: any = await this.empService.getEmployeeInfo(this.employee_personalId);
+
+  }
 
   async onSave() {
     let result: any;
-
       result = await this.empService
       .insertEmp(this.employee_personalId,this.employee_position,
         this.employee_type,
         this.employee_title,this.employee_name,this.employee_surname
         ,this.employee_bd,
-        this.employee_address,this.employee_religion);
+        this.employee_address,this.employee_religion,this.employee_tel);
       console.log('insert ', result);
       await this.getEmp();
-
+      document.location.href="#/main/main";
   }
 
 }
